@@ -1,0 +1,125 @@
+# PHP & Database
+*.php~
+*.phtml
+db_config.php
+config.php
+/vendor/
+composer.lock
+.env
+.env.local
+.env.*.local
+
+# Session & Cache
+/sessions/
+/cache/
+*.session
+
+# Logs
+*.log
+logs/
+*.tmp
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+.project
+.buildpath
+.settings/
+*.swp
+*.swo
+*~
+.htaccess.bak
+
+# OS Files
+Thumbs.db
+.DS_Store
+desktop.ini
+*.lnk
+
+# Temporary Files
+tmp/
+temp/
+*.bak
+*.backup
+*.orig
+
+# Compiled Files
+*.class
+*.o
+*.pyc
+*.pyo
+__pycache__/
+*.so
+
+# Build & Distribution
+/build/
+/dist/
+/node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Database Files (if using local SQLite/etc)
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+
+# Sensitive Information
+secrets.json
+credentials.json
+.ftpconfig
+.ftpignore
+
+# Large Media Files (consider using Git LFS or CDN)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.zip
+*.rar
+*.tar
+*.gz
+
+# Testing
+/tests/coverage/
+.coverage
+.pytest_cache/
+
+# macOS
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+.directory
+
+# Windows
+.Thumbs.db
+$RECYCLE.BIN/
+
+# Backup Files
+*.bak.php
+backup/
+backups/
+
+# Local Development
+local/
+local_config.php
+dev/
+.local/
+
+# TODO Files (optional - keep version controlled)
+# TODO_*.md
+
+# Node.js (if using any Node tools)
+package-lock.json
+yarn.lock
+
+# Others
+.gitkeep
+*.old
+*.new

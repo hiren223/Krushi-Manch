@@ -1,0 +1,370 @@
+﻿<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crop Diseases - KrushiManch</title>
+    <style>
+@import url('../../fonts.css');
+      body {
+        font-family: 'Adani Regular', sans-serif;
+        background-color: #f0f4f7;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #00796B;
+        color: white;
+        padding: 1px 0;
+        text-align: center;
+        font-size: 18px;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 2rem;
+      }
+      .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 30%;
+        padding: 1rem;
+        box-sizing: border-box;
+        transition: transform 0.2s;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      .card img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 6px;
+      }
+      .card h3 {
+        margin-top: 0.8rem;
+        color: #00796B;
+      }
+      .card p {
+        font-size: 14px;
+        color: #848484;
+        text-align: justify;
+      }
+      @media screen and (max-width: 1024px) {
+        .card {
+          width: 45%;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .card {
+          width: 100%;
+        }
+      }
+
+      .back-btn {
+        display: block;
+        text-align: center;
+        margin: 30px auto;
+        padding: 12px 30px;
+        background-color: #00796b;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        width: fit-content;
+      }
+
+      .back-btn:hover {
+        background-color: #005e50;
+      }
+      .floating-translate {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        font-family: 'Adani Regular', sans-serif;
+      }
+
+      .translate-toggle {
+        background-color: #00796b;
+        color: white;
+        padding: 10px 16px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 14px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.3s ease;
+      }
+
+      .translate-toggle:hover {
+        background-color: #00796b;
+      }
+
+      /* Hide dropdown by default */
+      #google_translate_element {
+        display: none;
+        margin-top: 8px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Show dropdown on hover */
+      .floating-translate:hover #google_translate_element {
+        display: block;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Common Crop Diseases</h1>
+    </header>
+
+    <div class="container">
+      <div class="card">
+        <img src="images/Late Blight.jpg" alt="Late Blight" />
+        <h3>Late Blight (Potato & Tomato)</h3>
+        <p>
+          Caused by *Phytophthora infestans*, late blight results in dark
+          lesions on leaves and stems, rapidly killing foliage. Fungicides and
+          resistant varieties help manage the disease.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Wheat Rust.webp" alt="Wheat Rust" />
+        <h3>Wheat Rust</h3>
+        <p>
+          A fungal disease caused by *Puccinia* species. It appears as orange or
+          brown pustules on leaves and stems, reducing yield and quality.
+          Controlled by resistant varieties and timely fungicide application.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Powdery Mildew.jpg" alt="Powdery Mildew" />
+        <h3>Powdery Mildew</h3>
+        <p>
+          White, powdery fungal growth appears on leaves and stems. Common in
+          cucurbits and cereals. Controlled through sulfur sprays and good air
+          circulation practices.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Rice Blast.jpg" alt="Rice Blast" />
+        <h3>Rice Blast</h3>
+        <p>
+          Caused by *Magnaporthe oryzae*, it affects all parts of rice plants
+          and can destroy entire fields. Managed with resistant cultivars and
+          appropriate fungicides.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Bacterial Wilt.jpg" alt="Bacterial Wilt" />
+        <h3>Bacterial Wilt (Solanaceous crops)</h3>
+        <p>
+          This soil-borne bacterial infection causes wilting and plant death.
+          Control methods include crop rotation, resistant varieties, and soil
+          solarization.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Downy Mildew.webp" alt="Downy Mildew" />
+        <h3>Downy Mildew</h3>
+        <p>
+          Appears as yellowish spots on the upper leaf surface and grey fungal
+          growth below. Common in grapes, onions, and cucurbits. Managed with
+          fungicides and resistant varieties.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Fusarium Wilt.png" alt="Fusarium Wilt" />
+        <h3>Fusarium Wilt</h3>
+        <p>
+          A soil-borne fungal disease causing yellowing, wilting, and plant
+          death. Effective control includes crop rotation and use of resistant
+          cultivars.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Leaf Curl Virus.jpeg" alt="Leaf Curl Virus" />
+        <h3>Leaf Curl Virus</h3>
+        <p>
+          A viral disease spread by whiteflies, causing upward leaf curling and
+          stunted growth. Managed through vector control and virus-resistant
+          hybrids.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Anthracnose.jpg" alt="Anthracnose" />
+        <h3>Anthracnose</h3>
+        <p>
+          Causes dark, sunken lesions on leaves, stems, and fruits. Common in
+          mango, beans, and cucurbits. Prevented with clean seed, fungicides,
+          and resistant varieties.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Clubroot (Crucifers).jpg" alt="Clubroot" />
+        <h3>Clubroot (Crucifers)</h3>
+        <p>
+          Causes swollen, distorted roots leading to stunted plant growth.
+          Managed by liming the soil to raise pH and crop rotation.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Black Sigatoka.jpg" alt="Black Sigatoka" />
+        <h3>Black Sigatoka (Banana)</h3>
+        <p>
+          A leaf-spot disease reducing banana yield by up to 50%. Controlled by
+          removing infected leaves and applying fungicides regularly.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Cercospora Leaf Spot.jpg" alt="Cercospora Leaf Spot" />
+        <h3>Cercospora Leaf Spot</h3>
+        <p>
+          Causes circular spots on leaves, especially in sugar beet and
+          soybeans. Managed by fungicide sprays and proper field hygiene.
+        </p>
+      </div>
+      <!-- 13 to 24 (newly added) -->
+      <div class="card">
+        <img src="images/Tikka Disease (Groundnut).webp" alt="Tikka Disease" />
+        <h3>Tikka Disease (Groundnut)</h3>
+        <p>
+          Characterized by circular spots on leaves caused by fungal pathogens.
+          Leads to defoliation and yield reduction. Controlled by fungicides and
+          clean seed use.
+        </p>
+      </div>
+      <div class="card">
+        <img
+          src="images/Bacterial Leaf Blight (Rice).jpg"
+          alt="Bacterial Leaf Blight"
+        />
+        <h3>Bacterial Leaf Blight (Rice)</h3>
+        <p>
+          Caused by *Xanthomonas oryzae*, it shows as yellowing of leaf margins
+          followed by wilting. Managed using resistant varieties and seed
+          treatment.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Sooty Mold.jpg" alt="Sooty Mold" />
+        <h3>Sooty Mold</h3>
+        <p>
+          A black fungal growth that appears on leaves due to honeydew excreted
+          by aphids or whiteflies. Controlled by managing the insect population.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Yellow Rust (Wheat).jpg" alt="Yellow Rust" />
+        <h3>Yellow Rust (Wheat)</h3>
+        <p>
+          Causes yellow pustules in stripes on leaves. Reduces grain yield and
+          quality. Control via resistant varieties and early fungicide spraying.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Red Rot (Sugarcane).jpg" alt="Red Rot" />
+        <h3>Red Rot (Sugarcane)</h3>
+        <p>
+          A serious fungal disease turning cane tissues red. Managed using
+          resistant cultivars and proper field sanitation.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Apple Scab.jpg" alt="Apple Scab" />
+        <h3>Apple Scab</h3>
+        <p>
+          A fungal disease producing dark lesions on leaves and fruit. Affects
+          quality and storage life. Controlled by fungicide sprays and orchard
+          hygiene.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Black Rot (Cabbage).jpg" alt="Black Rot" />
+        <h3>Black Rot (Cabbage)</h3>
+        <p>
+          Yellow V-shaped lesions appear on cabbage leaves, caused by bacteria.
+          Managed through crop rotation and hot water seed treatment.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Early Blight (Tomato).jpg" alt="Early Blight" />
+        <h3>Early Blight (Tomato)</h3>
+        <p>
+          Dark concentric spots appear on lower leaves, gradually affecting the
+          plant. Managed with fungicides and crop debris removal.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Smut (Maize and Sorghum).png" alt="Smut Disease" />
+        <h3>Smut (Maize and Sorghum)</h3>
+        <p>
+          Characterized by swollen galls filled with black spores. A fungal
+          disease controlled via seed treatment and field hygiene.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Rice Tungro Virus.jpg" alt="Tungro Virus" />
+        <h3>Rice Tungro Virus</h3>
+        <p>
+          Viral disease spread by green leafhoppers. Causes stunted growth and
+          yellow-orange discoloration. Prevented through resistant varieties and
+          vector control.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Grape Downy Mildew.webp" alt="Grape Downy Mildew" />
+        <h3>Grape Downy Mildew</h3>
+        <p>
+          Yellow oily spots on leaves followed by fungal growth. Causes leaf
+          drop and poor fruit set. Managed with copper-based fungicides.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/Papaya Ring Spot Virus.jpg" alt="Papaya Ring Spot Virus" />
+        <h3>Papaya Ring Spot Virus</h3>
+        <p>
+          Characterized by ring-shaped spots on leaves and fruits. Spread by
+          aphids. Controlled through removal of infected plants and use of
+          virus-free seedlings.
+        </p>
+      </div>
+      <a href="explore.html" class="back-btn">← Back to Home</a>
+    </div>
+     <!-- Floating Translate Button -->
+     <div class="floating-translate">
+      <div class="translate-toggle">🌐 Translate</div>
+      <div id="google_translate_element"></div>
+    </div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,hi,mr,ta,te,bn,gu,kn,pa",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
+</html>
+

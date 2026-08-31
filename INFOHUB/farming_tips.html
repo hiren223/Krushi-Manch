@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farming Tips - KrushiManch</title>
+  <style>
+@import url('../../fonts.css');
+    body {
+      font-family: 'Adani Regular', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fff3;
+    }
+
+    header {
+      background-color: #00796B;
+      color: white;
+      padding: 1px 0;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .tip-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .tip-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin: 15px;
+      width: calc(33.33% - 30px);
+      box-sizing: border-box;
+      padding: 15px;
+    }
+
+    .tip-card h3 {
+      font-size: 20px;
+      margin: 10px 0;
+      color: #00796B;
+    }
+
+    .tip-card p {
+      color: #555;
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    @media (max-width: 768px) {
+      .tip-card {
+        width: calc(50% - 30px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .tip-card {
+        width: 100%;
+      }
+    }
+
+    .back-btn {
+        display: block;
+        text-align: center;
+        margin: 30px auto;
+        padding: 12px 30px;
+        background-color: #00796b;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        width: fit-content;
+      }
+
+      .back-btn:hover {
+        background-color: #005e50;
+      }
+
+      .floating-translate {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        font-family: 'Adani Regular', sans-serif;
+      }
+
+      .translate-toggle {
+        background-color: #00796b;
+        color: white;
+        padding: 10px 16px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 14px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.3s ease;
+      }
+
+      .translate-toggle:hover {
+        background-color: #00796b;
+      }
+
+      /* Hide dropdown by default */
+      #google_translate_element {
+        display: none;
+        margin-top: 8px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Show dropdown on hover */
+      .floating-translate:hover #google_translate_element {
+        display: block;
+      }
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Farming Tips & Best Practices</h1>
+  </header>
+
+  <div class="container">
+    <section class="tip-container">
+
+      <div class="tip-card">
+        <h3>1. Soil Testing Before Sowing</h3>
+        <p>Regular soil testing helps identify nutrient deficiencies and pH levels. This allows for proper fertilizer selection and balanced nutrient management, ensuring optimal crop yield and healthy plant development. Test at least once a year to maintain soil health.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>2. Organic Composting</h3>
+        <p>Composting organic waste like crop residues, kitchen scraps, and manure creates rich humus. This improves soil texture, retains moisture, promotes microbial activity, and reduces dependency on chemical fertilizers, thus fostering sustainable farming.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>3. Crop Rotation Techniques</h3>
+        <p>Rotating different crops across seasons prevents nutrient depletion and breaks pest and disease cycles. For example, rotating legumes with cereals enriches nitrogen levels in the soil, enhancing fertility and reducing the need for synthetic inputs.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>4. Efficient Water Management</h3>
+        <p>Drip and sprinkler irrigation systems reduce water wastage by targeting plant roots directly. Mulching and timely irrigation scheduling also minimize evaporation losses. Conserving water is crucial in drought-prone regions and for long-term sustainability.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>5. Mulching Benefits</h3>
+        <p>Applying mulchâ€”such as straw or dried leavesâ€”around plants retains soil moisture, reduces weed growth, and regulates temperature. Organic mulch decomposes slowly, enriching the soil and improving its structure over time.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>6. Using Certified Seeds</h3>
+        <p>Always select certified and high-yield varieties from reliable sources. These seeds are disease-resistant, climate-suitable, and offer better germination rates, leading to improved productivity and lower crop loss risk.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>7. Timely Sowing Practices</h3>
+        <p>Planting seeds at the appropriate time based on crop calendar and climate forecasts maximizes germination and reduces the risk of crop failure due to unseasonal rains or temperature fluctuations.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>8. Intercropping Methods</h3>
+        <p>Growing two or more crops simultaneously on the same land increases yield and improves pest control. For example, maize and beans can be grown together, where beans fix nitrogen and maize provides support to climbing plants.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>9. Natural Pest Control</h3>
+        <p>Adopt biological control methods using beneficial insects like ladybugs and wasps. Use organic sprays such as neem oil, chili-garlic extract, or soap solution to minimize chemical pesticide use and maintain ecological balance.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>10. Farm Record Keeping</h3>
+        <p>Maintain detailed records of planting dates, input usage, pest outbreaks, and yield. This data helps identify patterns, make informed decisions, and improve future planning and budgeting.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>11. Weather Forecasting Tools</h3>
+        <p>Use mobile apps or local weather stations to receive real-time updates on rainfall, temperature, and wind. Planning farming operations according to weather can prevent crop damage and optimize resource use.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>12. Weed Management</h3>
+        <p>Weeds compete with crops for nutrients and water. Early weeding, using tools like hoes or mulching, and adopting herbicide rotation can effectively reduce weed growth and enhance crop health.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>13. Green Manuring</h3>
+        <p>Green manure crops such as sunhemp or dhaincha are grown and plowed back into the soil. They enrich the soil with nitrogen, improve texture, and support better microbial activity, acting as a natural soil conditioner.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>14. Cover Crops for Protection</h3>
+        <p>Cover crops like clover or rye prevent soil erosion, suppress weeds, and add organic matter. These crops shield the soil during off-season, keeping it fertile and ready for the next cropping cycle.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>15. Seasonal Farm Calendars</h3>
+        <p>Create a farm activity calendar that includes sowing, irrigation, fertilizing, and harvesting dates. This helps optimize labor and resources, ensuring no critical farming activity is missed.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>16. Post-Harvest Management</h3>
+        <p>Timely and proper drying, cleaning, sorting, and storage of crops reduce post-harvest losses. Use ventilated containers and avoid damp storage conditions to preserve quality and value.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>17. Continuous Learning</h3>
+        <p>Participate in government and NGO training programs, agri expos, and field demonstrations. Learning new techniques and networking with experienced farmers can boost your knowledge and productivity.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>18. Farmer Health & Safety</h3>
+        <p>Always wear gloves, boots, and masks when handling chemicals. Ensure proper first aid is available on the farm. A healthy and safe farmer is vital for a productive and sustainable agriculture system.</p>
+      </div>
+
+    </section>
+    <a href="explore.html" class="back-btn">← Back to Home</a>
+  </div>
+ <!-- Floating Translate Button -->
+ <div class="floating-translate">
+  <div class="translate-toggle">🌐 Translate</div>
+  <div id="google_translate_element"></div>
+</div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: "en",
+        includedLanguages: "en,hi,mr,ta,te,bn,gu,kn,pa",
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      },
+      "google_translate_element"
+    );
+  }
+</script>
+
+<script
+  type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+></script>
+</body>
+</html>
+

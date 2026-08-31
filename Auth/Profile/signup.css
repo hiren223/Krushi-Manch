@@ -1,0 +1,371 @@
+@import url('../../fonts.css');
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Adani Regular', sans-serif;
+  }
+
+  :root {
+      --bg-color: #00796B;
+      --hover-color: #05a794;
+      --color: white;
+      --bg-color2: black;
+  }
+
+  body {
+      height: 100vh;
+      background-color: #f4f4f4;
+  }
+  nav {
+      position: sticky;
+      top: 0;
+      display: flex;
+      height: 70px;
+      width: 100%;
+      background: var(--bg-color);
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 30px 0 10px;
+      flex-wrap: wrap;
+      font-family: 'Adani SemiBold', sans-serif;
+      z-index: 1000;
+  }
+
+  nav .logo img {
+      width: 180px;
+      height: 60px;
+  }
+
+  nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+  }
+
+  nav ul li {
+      margin: 0 5px;
+  }
+
+  nav ul li a {
+      color: var(--color);
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 8px 15px;
+      border-radius: 5px;
+      letter-spacing: 1px;
+      position: relative;
+      transition: all 0.3s ease;
+  }
+
+  .text li a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--color);
+      transform: scaleX(0);
+      transition: 0.3s;
+  }
+
+  .text li a:hover::after {
+      transform: scaleX(1);
+  }
+
+
+  nav .menu-btn i {
+      color: var(--color);
+      font-size: 22px;
+      cursor: pointer;
+      display: none;
+  }
+
+  input[type="checkbox"] {
+      display: none;
+  }
+
+  /* Dropdown container */
+  .dropdown {
+      position: relative;
+      display: inline-block;
+  }
+
+  /* Dropdown button */
+  i {
+      color: white;
+      padding: 5px;
+      font-size: 1.4rem;
+      border-radius: 50px;
+      cursor: pointer;
+  }
+
+  /* Dropdown content */
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+
+      min-width: 100px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+  }
+
+  /* Dropdown links */
+  .dropdown-content a {
+      color: black;
+      padding: 10px 12px;
+      text-decoration: none;
+      display: block;
+  }
+
+  /* Hover effect */
+  .dropdown-content a {
+      background-color: #f1f1f1;
+  }
+
+  /* Show dropdown on hover */
+  .dropdown:hover .dropdown-content {
+      display: block;
+  }
+
+ 
+
+  .container {
+      display: flex;
+      width: 80%;
+      max-width: 1200px;
+      height: 95%;
+      background: var(--color);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        margin: 50px auto;
+            position: absolute;
+            top: 53%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+  }
+
+  .signup-section {
+      width: 50%;
+      padding: 40px;
+      background: #fff;
+  }
+
+  .signup-section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+  }
+
+  .signup-section p {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 20px;
+  }
+
+  .google-signup {
+      width: 100%;
+      padding: 10px;
+      background: #fff;
+      border: 1px solid #ccc;
+      cursor: pointer;
+  }
+
+  .divider {
+      text-align: center;
+      margin: 15px 0;
+      color: #aaa;
+  }
+
+  form {
+      display: flex;
+      flex-direction: column;
+  }
+
+  label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      font-weight: bold;
+  }
+
+  input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      transition: 0.3s ease;
+  }
+
+  input:focus {
+      border-color: var(--bg-color);
+      box-shadow: 0 0 10px var(--hover-color)
+  }
+
+  .terms {
+      margin-bottom: 10px;
+  }
+
+  .submit-btn {
+      width: 100%;
+      padding: 10px;
+      background: var(--bg-color);
+      color: var(--color);
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+  }
+
+  .login-text {
+      text-align: center;
+      margin-top: 10px;
+  }
+
+  .login-text a {
+      color: var(--bg-color2);
+      font-weight: bold;
+  }
+
+  .info-section {
+      background: url(./smart-agriculture-iot-with-hand-planting-tree-background.png);
+      background-position: center;
+      background-size: cover;
+      width: 50%;
+      color: var(--color);
+  }
+
+
+  .info-section h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+  }
+
+  .info-section p {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 20px;
+  }
+
+  @media (max-width:426px) {
+      .container {
+          width: 100%;
+            margin: 85px auto;
+                position: absolute;
+                top: 43%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 33rem;
+
+      }
+
+      .signup-section {
+          width: 100%;
+          padding: 40px;
+          background: #fff;
+      }
+
+      label {
+          font-size: 14px;
+          margin-bottom: 5px;
+          font-weight: bold;
+      }
+
+      input {
+          width: 80vw;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+      }
+
+      .info-section {
+          background: url(/images/smart-agriculture-iot-with-hand-planting-tree-background.jpg);
+          width: 100%;
+          height: 100%;
+          background-position: center;
+          background-size: cover;
+      }
+
+      .terms {
+          display: flex;
+          font-size: 0.8rem;
+      }
+
+      .terms input {
+          width: 15px;
+      }
+
+  }
+
+   @media (max-width: 920px) {
+
+
+
+       nav .menu-btn i {
+           display: block;
+       }
+
+       #click:checked~.menu-btn i:before {
+           content: "\f00d";
+       }
+
+       nav ul {
+           position: fixed;
+           top: 70px;
+           left: -100%;
+           background: var(--bg-color);
+           height: 100vh;
+           width: 100%;
+           text-align: center;
+           display: block;
+           transition: all 0.3s ease;
+       }
+
+       #click:checked~ul {
+           left: 0;
+       }
+
+       nav ul li {
+           width: 100%;
+           margin: 40px 0;
+       }
+
+       nav ul li a {
+           width: 100%;
+           margin-left: -100%;
+           display: block;
+           font-size: 20px;
+           transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+       }
+
+       /* nav .logo img {
+        width: 140px;
+    } */
+
+       #click:checked~ul li a {
+           margin-left: 0px;
+       }
+
+       nav ul li a.active,
+       nav ul li a:hover {
+           background: none;
+           color: cyan;
+       }
+
+       .text li a::after {
+           content: "";
+           position: absolute;
+           bottom: 0;
+           left: 0;
+           width: 0%;
+           height: 0px;
+           background: var(--bg-color2);
+           transform: scaleX(0);
+           transition: 0.3s;
+       }
+   }

@@ -1,0 +1,16 @@
+<label>Select Vehicle:</label>
+        <select>
+            <option value="tractor">Tractor</option> ✔️
+            <option value="harvester">Harvester</option>
+            <option value="plough">Plough</option>
+            <option value="plough">Fertilizer spreaders</option>
+            <option value="plough">Cotton picker</option>
+            <option value="plough">Rotavator</option>
+            <option value="plough">Cultivator</option>
+            <option value="plough">Balers</option>
+            <option value="plough">Potato Planter</option>
+            <option value="plough">Harrow</option>
+        </select>
+
+
+         

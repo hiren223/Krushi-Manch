@@ -1,0 +1,399 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crops - KrushiManch</title>
+    <style>
+@import url('../../fonts.css');
+      /* General Styling */
+      body {
+        font-family: 'Adani Regular', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+      }
+
+      header {
+        background-color: #00796b;
+        color: white;
+        padding: 1px 0;
+        text-align: center;
+        font-size: 18px;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      .crop-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .crop-card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin: 15px;
+        width: calc(33.33% - 30px);
+        box-sizing: border-box;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .crop-card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .crop-card img {
+        width: 100%;
+        height: 292.68px;
+        border-bottom: 2px solid #ddd;
+        object-fit: cover;
+      }
+
+      .crop-card h3 {
+        font-size: 22px;
+        margin: 15px;
+        color: #333;
+      }
+
+      .crop-card p {
+        margin: 0 15px 15px;
+        color: #555;
+        font-size: 14px;
+      }
+
+      .crop-card p strong {
+        color: #00796b;
+      }
+
+      /* Responsive Cards */
+      @media (max-width: 768px) {
+        .crop-card {
+          width: calc(50% - 30px);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .crop-card {
+          width: 100%;
+        }
+      }
+
+      /* Back to Home Button */
+      .back-btn {
+        display: block;
+        text-align: center;
+        margin: 30px auto;
+        padding: 12px 30px;
+        background-color: #00796b;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        width: fit-content;
+      }
+
+      .back-btn:hover {
+        background-color: #005e50;
+      }
+
+      .floating-translate {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        font-family: 'Adani Regular', sans-serif;
+      }
+
+      .translate-toggle {
+        background-color: #00796b;
+        color: white;
+        padding: 10px 16px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 14px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.3s ease;
+      }
+
+      .translate-toggle:hover {
+        background-color: #00796b;
+      }
+
+      /* Hide dropdown by default */
+      #google_translate_element {
+        display: none;
+        margin-top: 8px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Show dropdown on hover */
+      .floating-translate:hover #google_translate_element {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Crops Information</h1>
+    </header>
+
+    <!-- Main content -->
+    <div class="container">
+      <section class="crop-container">
+        <!-- Crop 1: Rice -->
+        <div class="crop-card">
+          <img src="images/rice.jpg" alt="Rice" />
+          <h3>Rice</h3>
+          <p><strong>Scientific Name:</strong> Oryza sativa</p>
+          <p>
+            <strong>Growing Conditions:</strong> Warm, humid climates with
+            well-drained soil.
+          </p>
+          <p><strong>Season:</strong> Monsoon (Summer)</p>
+          <p><strong>Common Diseases:</strong> Rice Blast, Sheath Blight</p>
+          <p>
+            <strong>Care Tips:</strong> Needs plenty of water during the growing
+            season and a sunny environment for best growth.
+          </p>
+        </div>
+
+        <!-- Crop 2: Wheat -->
+        <div class="crop-card">
+          <img src="images/wheat.jpg" alt="Wheat" />
+          <h3>Wheat</h3>
+          <p><strong>Scientific Name:</strong> Triticum aestivum</p>
+          <p>
+            <strong>Growing Conditions:</strong> Cool weather and well-drained
+            soil.
+          </p>
+          <p><strong>Season:</strong> Winter</p>
+          <p>
+            <strong>Common Diseases:</strong> Wheat Rust, Fusarium Head Blight
+          </p>
+          <p>
+            <strong>Care Tips:</strong> Needs regular watering, especially
+            during the growing season, and requires fertile soil.
+          </p>
+        </div>
+
+        <!-- Crop 3: Corn -->
+        <div class="crop-card">
+          <img src="images/Corn.jpg" alt="Corn" />
+          <h3>Corn</h3>
+          <p><strong>Scientific Name:</strong> Zea mays</p>
+          <p>
+            <strong>Growing Conditions:</strong> Requires full sunlight and
+            well-drained soil.
+          </p>
+          <p><strong>Season:</strong> Summer</p>
+          <p><strong>Common Diseases:</strong> Corn Smut, Corn Earworm</p>
+          <p>
+            <strong>Care Tips:</strong> Needs regular irrigation and protection
+            from pests to ensure a healthy yield.
+          </p>
+        </div>
+
+        <!-- Crop 4: Barley -->
+        <div class="crop-card">
+          <img src="images/Barley.jpg" alt="Barley" />
+          <h3>Barley</h3>
+          <p><strong>Scientific Name:</strong> Hordeum vulgare</p>
+          <p>
+            <strong>Growing Conditions:</strong> Prefers cooler climates and
+            well-drained soil.
+          </p>
+          <p><strong>Season:</strong> Spring</p>
+          <p>
+            <strong>Common Diseases:</strong> Powdery Mildew, Barley Yellow
+            Dwarf Virus
+          </p>
+          <p>
+            <strong>Care Tips:</strong> Barley requires moderate water and good
+            soil drainage for healthy growth.
+          </p>
+        </div>
+
+        <!-- Crop 5: Tomato -->
+        <div class="crop-card">
+          <img src="images/Tomato.jpg" alt="Tomato" />
+          <h3>Tomato</h3>
+          <p><strong>Scientific Name:</strong> Solanum lycopersicum</p>
+          <p>
+            <strong>Growing Conditions:</strong> Warm, sunny conditions with
+            well-drained soil.
+          </p>
+          <p><strong>Season:</strong> Summer</p>
+          <p><strong>Common Diseases:</strong> Early Blight, Late Blight</p>
+          <p>
+            <strong>Care Tips:</strong> Requires plenty of sunlight and should
+            be watered consistently to avoid wilting.
+          </p>
+        </div>
+
+        <!-- Crop 6: Potato -->
+        <div class="crop-card">
+          <img src="images/poteto.jpg" alt="Potato" />
+          <h3>Potato</h3>
+          <p><strong>Scientific Name:</strong> Solanum tuberosum</p>
+          <p>
+            <strong>Growing Conditions:</strong> Prefers cool weather and
+            well-drained, loamy soil.
+          </p>
+          <p><strong>Season:</strong> Spring to Summer</p>
+          <p><strong>Common Diseases:</strong> Potato Blight, Scab</p>
+          <p>
+            <strong>Care Tips:</strong> Needs regular watering and good soil
+            aeration for healthy tuber development.
+          </p>
+        </div>
+
+        <!-- Crop 7: Carrot -->
+        <div class="crop-card">
+          <img src="images/carrot.jpg" alt="Carrot" />
+          <h3>Carrot</h3>
+          <p><strong>Scientific Name:</strong> Daucus carota</p>
+          <p>
+            <strong>Growing Conditions:</strong> Grows best in loose, sandy,
+            well-drained soil.
+          </p>
+          <p><strong>Season:</strong> Winter to Spring</p>
+          <p>
+            <strong>Common Diseases:</strong> Carrot Rust Fly, Powdery Mildew
+          </p>
+          <p>
+            <strong>Care Tips:</strong> Needs regular watering, especially
+            during dry spells, and prefers cooler temperatures.
+          </p>
+        </div>
+
+        <!-- Crop 8: Onion -->
+        <div class="crop-card">
+          <img src="images/onion.jpg" alt="Onion" />
+          <h3>Onion</h3>
+          <p><strong>Scientific Name:</strong> Allium cepa</p>
+          <p>
+            <strong>Growing Conditions:</strong> Requires well-drained, fertile
+            soil and full sunlight.
+          </p>
+          <p><strong>Season:</strong> Winter to Spring</p>
+          <p><strong>Common Diseases:</strong> Downy Mildew, Botrytis Rot</p>
+          <p>
+            <strong>Care Tips:</strong> Onions prefer consistent watering and
+            need enough space for their roots to develop.
+          </p>
+        </div>
+
+        <!-- Crop 9: Spinach -->
+        <div class="crop-card">
+          <img src="images/spinach.jpg" alt="Spinach" />
+          <h3>Spinach</h3>
+          <p><strong>Scientific Name:</strong> Spinacia oleracea</p>
+          <p>
+            <strong>Growing Conditions:</strong> Grows well in cooler weather
+            with rich, loamy soil.
+          </p>
+          <p><strong>Season:</strong> Winter to Spring</p>
+          <p><strong>Common Diseases:</strong> Downy Mildew, Powdery Mildew</p>
+          <p>
+            <strong>Care Tips:</strong> Needs regular watering and protection
+            from intense heat.
+          </p>
+        </div>
+
+        <!-- Crop 10: Lettuce -->
+        <div class="crop-card">
+          <img src="images/lettuce.jpg" alt="Lettuce" />
+          <h3>Lettuce</h3>
+          <p><strong>Scientific Name:</strong> Lactuca sativa</p>
+          <p>
+            <strong>Growing Conditions:</strong> Prefers cool, moist climates
+            and well-drained soil.
+          </p>
+          <p><strong>Season:</strong> Spring</p>
+          <p><strong>Common Diseases:</strong> Downy Mildew, Lettuce Drop</p>
+          <p>
+            <strong>Care Tips:</strong> Needs consistent moisture and cooler
+            temperatures to thrive.
+          </p>
+        </div>
+
+        <!-- Crop 11: Eggplant -->
+        <div class="crop-card">
+          <img src="images/eggplant.jpg" alt="Eggplant" />
+          <h3>Eggplant</h3>
+          <p><strong>Scientific Name:</strong> Solanum melongena</p>
+          <p>
+            <strong>Growing Conditions:</strong> Prefers hot temperatures and
+            well-drained soil.
+          </p>
+          <p><strong>Season:</strong> Summer</p>
+          <p>
+            <strong>Common Diseases:</strong> Verticillium Wilt, Flea Beetles
+          </p>
+          <p>
+            <strong>Care Tips:</strong> Needs full sunlight and consistent
+            watering.
+          </p>
+        </div>
+
+        <!-- Crop 12: Cucumber -->
+        <div class="crop-card">
+          <img src="images/cucumber.jpg" alt="Cucumber" />
+          <h3>Cucumber</h3>
+          <p><strong>Scientific Name:</strong> Cucumis sativus</p>
+          <p>
+            <strong>Growing Conditions:</strong> Requires warm temperatures and
+            well-drained, slightly acidic soil.
+          </p>
+          <p><strong>Season:</strong> Summer</p>
+          <p><strong>Common Diseases:</strong> Powdery Mildew, Downy Mildew</p>
+          <p>
+            <strong>Care Tips:</strong> Needs consistent watering, especially
+            during hot weather.
+          </p>
+        </div>
+      </section>
+
+      <!-- Back to Home Button -->
+      <a href="explore.html" class="back-btn">← Back to Home</a>
+    </div>
+     <!-- Floating Translate Button -->
+     <div class="floating-translate">
+      <div class="translate-toggle">🌐 Translate</div>
+      <div id="google_translate_element"></div>
+    </div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,hi,mr,ta,te,bn,gu,kn,pa",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
+</html>
+
+

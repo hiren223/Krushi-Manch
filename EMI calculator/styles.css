@@ -1,0 +1,173 @@
+/* Import Adani fonts */
+@import url('../../fonts.css');
+
+/* General Styles */
+body {
+    font-family: 'Adani Regular', sans-serif;
+    background: linear-gradient(to right, #79fc9e, #96e6a1);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+/* Calculator Card */
+.calculator {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    width: 95%;
+    max-width: 650px;
+    margin: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: #00796B;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Inputs */
+input {
+    width: 40vw;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #00796B;
+    outline: none;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #00796B, #05a794);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #05997c, #00796B);
+}
+
+/* Results */
+#result {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 1rem;
+    color: #444;
+}
+
+#emiValue,
+#totalInterest,
+#totalAmount {
+    font-weight: bold;
+    color: #00796B;
+}
+
+/* Breakdown Section */
+#breakdown {
+    margin-top: 35px;
+}
+
+.table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+th {
+    background-color: #f9f9f9;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .calculator {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input,
+    button {
+        font-size: 0.95rem;
+         width: 82vw;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    input,
+    button {
+        font-size: 0.85rem;
+                width: 81vw;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="shortcut icon" href="/test website/image/K.jpg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Rental Service</title>
+</head>
+
+<body>
+    <!-- start navbar -->
+    <nav>
+        <div class="logo">
+            <img src="./rental-image/Krushi_Manch.png" alt="#">
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul class="text">
+            <li><a class="active" href="/krushi-manch/welcome.php">Home</a></li>
+            <li><a href="#category">Category</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!-- close navbar -->
+
+    <!-- start home section -->
+    <section id="home">
+        
+    </section>
+    <!-- close home section -->
+
+    <!-- start category section -->
+    <section id="category">
+        <h2>Category</h2>
+        <div class="parent">
+            <a href="../rental-service/tractor/tractor.php">
+                <div class="div1 category-card">
+                    <img src="./rental-image/tractor.png" alt="Tractors">
+                    <h3>Tractors</h3>
+                </div>
+            </a>
+
+            <a href="../rental-service/harvester/harvester.php">
+                <div class="div2 category-card">
+                    <img src="./rental-image/combine-harvester.png" alt="Combine harvester">
+                    <h3>Combine harvester</h3>
+                </div>
+            </a>
+
+            <a href="../rental-service/Plough/Plough.php">
+                <div class="div3 category-card">
+                    <img src="./rental-image/plough.png" alt="Plough">
+                    <h3>Plough</h3>
+                </div>
+            </a>
+
+
+            <a href="../rental-service/Cultivator/Cultivator.php">
+                <div class="div7 category-card">
+                    <img src="./rental-image/Cultivator.png" alt="Cultivator">
+                    <h3>Cultivator</h3>
+                </div>
+            </a>
+
+        </div>
+    </section>
+    <!-- close category section -->
+
+
+    
+    <!-- Start About Page -->
+    <section id="about-us">
+        <div id="aboutcontainer">
+            <h1>About Us</h1>
+            <div class="aboutcontent">
+                <!-- Our Story Section -->
+                <div class="section">
+                    <div class="icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h2>Our Story</h2>
+                    <p>Our story unfolds with the first furrow turned, hands calloused yet tender. Generations before us
+                        sowed the same soil, their whispers carried by the wind. We honor their legacy, tilling the
+                        earth with reverence. Each seed planted is a promise - a promise of sustenance, resilience, and
+                        growth.</p>
+                </div>
+
+                <!-- Our Mission Section -->
+                <div class="section">
+                    <div class="icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h2>Our Mission</h2>
+                    <p>"Empowering Farmers, Nourishing Communities: Our mission is to foster sustainable agriculture,
+                        share knowledge, and cultivate a resilient farming ecosystem where every seed planted yields
+                        prosperity." 🌱🌾</p>
+                </div>
+
+                <!-- Our Vision Section -->
+                <div class="section">
+                    <div class="icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h2>Our Vision</h2>
+                    <p>"Cultivating Tomorrow's Harvest, Rooted in Sustainability: Our vision is to create a global
+                        network where farmers thrive, ecosystems flourish, and the legacy of agriculture endures for
+                        generations to come."🌱🌎</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- close About Page -->
+
+    <!-- Start Footer -->
+    <footer>
+        <div id="container">
+            <img src="../image/logo.png" alt="#">
+            <div class="left-side">
+                <div class="details"><i class="ri-map-pin-line"></i> <span> Gandhinagar,Gujrat-382421 </span></div>
+                <div class="details"><i class="ri-phone-line"></i> <span>+91 00000 00000 </span> </div>
+                <div class="details"><i class="ri-mail-line"></i> <span> krushimanch.info@gmail.com </span></div>
+            </div>
+            <div class="right-side">
+                <h3>About The Company</h3>
+                <div class="text">
+                    Our company provide all farming service such as Market Place to sell goods,<br>Rental Equipment
+                    service,Real Time Communication for Farmers,EMI Calculator,etc.
+                </div> 
+                <a href="https://chat.whatsapp.com/CqnsUJ9VogY8bk7dYT7CEK"><i class="ri-whatsapp-line"></i></a>
+                <a href="https://t.me/krushimanch_info"><i class="ri-telegram-2-line"></i></a>
+                <a href="#"><i class="ri-facebook-fill"></i></a>
+                <a href="#"><i class="ri-instagram-line"></i></a>
+                <a href="#"><i class="ri-twitter-x-line"></i></a>
+            </div>
+        </div>
+        <div class="copy"><span>Copyright © 2025 krushi manch, All Rights Reserved</span>
+        </div>
+    </footer>
+    <!-- Close Footer -->
+
+
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll("nav ul.text li a");
+        const checkbox = document.getElementById("click");
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", function () {
+                checkbox.checked = false; // Uncheck the checkbox to close menu
+            });
+        });
+    });
+    
+</script>
+
+</html>

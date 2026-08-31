@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herbicides - KrushiManch</title>
+  <style>
+@import url('../../fonts.css');
+    /* General Styling */
+    body {
+      font-family: 'Adani Regular', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+
+    header {
+      background-color: #00796B;
+      color: white;
+      padding: 1px 0;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .herbicide-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 15px;
+      width: calc(33.33% - 30px); /* Three cards in a row */
+      box-sizing: border-box;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .herbicide-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+    .herbicide-card img {
+      width: 100%;
+      height: 438.21px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .herbicide-card h3 {
+      font-size: 22px;
+      margin: 15px;
+      color: #333;
+    }
+
+    .herbicide-card p {
+      margin: 0 15px 15px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .herbicide-card p strong {
+      color: #00796B;
+    }
+
+    /* Card container for a grid layout */
+    .herbicide-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    /* Make the cards stack vertically on smaller screens */
+    @media (max-width: 768px) {
+      .herbicide-card {
+        width: calc(50% - 30px); /* Two cards in a row on medium screens */
+      }
+    }
+
+    /* Make the cards stack vertically on very small screens */
+    @media (max-width: 480px) {
+      .herbicide-card {
+        width: 100%; /* One card in a row on small screens */
+      }
+    }
+
+    .back-btn {
+        display: block;
+        text-align: center;
+        margin: 30px auto;
+        padding: 12px 30px;
+        background-color: #00796b;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        width: fit-content;
+      }
+
+      .back-btn:hover {
+        background-color: #005e50;
+      }
+
+      .floating-translate {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        font-family: 'Adani Regular', sans-serif;
+      }
+
+      .translate-toggle {
+        background-color: #00796b;
+        color: white;
+        padding: 10px 16px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 14px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.3s ease;
+      }
+
+      .translate-toggle:hover {
+        background-color: #00796b;
+      }
+
+      /* Hide dropdown by default */
+      #google_translate_element {
+        display: none;
+        margin-top: 8px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Show dropdown on hover */
+      .floating-translate:hover #google_translate_element {
+        display: block;
+      }
+  
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Herbicide Information</h1>
+  </header>
+
+  <!-- Main content -->
+  <div class="container">
+    <section class="herbicide-container">
+      <!-- Herbicide 1: Glyphosate -->
+      <div class="herbicide-card">
+        <img src="images/Glyphosate.png" alt="Glyphosate">
+        <h3>Glyphosate</h3>
+        <p><strong>Common Name:</strong> Glyphosate</p>
+        <p><strong>Type:</strong> Broad-spectrum systemic herbicide</p>
+        <p><strong>Application:</strong> Pre- and post-emergence application to control weeds</p>
+        <p><strong>Target Weeds:</strong> Annual and perennial weeds, grasses</p>
+        <p><strong>Mode of Action:</strong> Inhibits amino acid production in plants</p>
+      </div>
+
+      <!-- Herbicide 2: Atrazine -->
+      <div class="herbicide-card">
+        <img src="images/Atrazine.webp" alt="Atrazine">
+        <h3>Atrazine</h3>
+        <p><strong>Common Name:</strong> Atrazine</p>
+        <p><strong>Type:</strong> Selective herbicide</p>
+        <p><strong>Application:</strong> Pre-emergence application for weed control</p>
+        <p><strong>Target Weeds:</strong> Broadleaf weeds, grasses</p>
+        <p><strong>Mode of Action:</strong> Inhibits photosynthesis in weeds</p>
+      </div>
+
+      <!-- Herbicide 3: 2,4-D -->
+      <div class="herbicide-card">
+        <img src="images/2,4-D.webp" alt="2,4-D">
+        <h3>2,4-D</h3>
+        <p><strong>Common Name:</strong> 2,4-Dichlorophenoxyacetic acid</p>
+        <p><strong>Type:</strong> Selective herbicide</p>
+        <p><strong>Application:</strong> Post-emergence application for broadleaf weed control</p>
+        <p><strong>Target Weeds:</strong> Broadleaf weeds</p>
+        <p><strong>Mode of Action:</strong> Synthetic auxin affecting cell growth</p>
+      </div>
+
+      <!-- Herbicide 4: Roundup -->
+      <div class="herbicide-card">
+        <img src="images/Roundup.webp" alt="Roundup">
+        <h3>Roundup</h3>
+        <p><strong>Common Name:</strong> Glyphosate</p>
+        <p><strong>Type:</strong> Non-selective herbicide</p>
+        <p><strong>Application:</strong> Post-emergence application for a broad spectrum of weeds</p>
+        <p><strong>Target Weeds:</strong> Grasses, broadleaf weeds, and woody plants</p>
+        <p><strong>Mode of Action:</strong> Inhibits amino acid synthesis in plants</p>
+      </div>
+
+      <!-- Herbicide 5: Dicamba -->
+      <div class="herbicide-card">
+        <img src="images/Dicamba.webp" alt="Dicamba">
+        <h3>Dicamba</h3>
+        <p><strong>Common Name:</strong> Dicamba</p>
+        <p><strong>Type:</strong> Selective herbicide</p>
+        <p><strong>Application:</strong> Post-emergence application for control of broadleaf weeds</p>
+        <p><strong>Target Weeds:</strong> Broadleaf weeds</p>
+        <p><strong>Mode of Action:</strong> Affects plant growth by disrupting cellular processes</p>
+      </div>
+
+      <!-- Herbicide 6: Paraquat -->
+      <div class="herbicide-card">
+        <img src="images/Paraquat.jpeg" alt="Paraquat">
+        <h3>Paraquat</h3>
+        <p><strong>Common Name:</strong> Paraquat</p>
+        <p><strong>Type:</strong> Non-selective herbicide</p>
+        <p><strong>Application:</strong> Post-emergence application for rapid weed control</p>
+        <p><strong>Target Weeds:</strong> Broad-spectrum control</p>
+        <p><strong>Mode of Action:</strong> Inhibits photosynthesis by disrupting electron transport</p>
+      </div>
+
+      <!-- Herbicide 7: Pendimethalin -->
+      <div class="herbicide-card">
+        <img src="images/Pendimethalin.avif" alt="Pendimethalin">
+        <h3>Pendimethalin</h3>
+        <p><strong>Common Name:</strong> Pendimethalin</p>
+        <p><strong>Type:</strong> Pre-emergence herbicide</p>
+        <p><strong>Application:</strong> For weed control in crops like corn and soybean</p>
+        <p><strong>Target Weeds:</strong> Grass and broadleaf weeds</p>
+        <p><strong>Mode of Action:</strong> Inhibits cell division in plants</p>
+      </div>
+
+      <!-- Herbicide 8: Flumioxazin -->
+      <div class="herbicide-card">
+        <img src="images/Flumioxazin.webp" alt="Flumioxazin">
+        <h3>Flumioxazin</h3>
+        <p><strong>Common Name:</strong> Flumioxazin</p>
+        <p><strong>Type:</strong> Pre-emergence herbicide</p>
+        <p><strong>Application:</strong> For broad-spectrum weed control</p>
+        <p><strong>Target Weeds:</strong> Broadleaf weeds and grasses</p>
+        <p><strong>Mode of Action:</strong> Inhibits chlorophyll synthesis in plants</p>
+      </div>
+
+      <!-- Herbicide 9: S-metolachlor -->
+      <div class="herbicide-card">
+        <img src="images/S-metolachlor.webp" alt="S-metolachlor">
+        <h3>S-metolachlor</h3>
+        <p><strong>Common Name:</strong> S-metolachlor</p>
+        <p><strong>Type:</strong> Pre-emergence herbicide</p>
+        <p><strong>Application:</strong> For weed control in crops like corn and soybeans</p>
+        <p><strong>Target Weeds:</strong> Grasses and broadleaf weeds</p>
+        <p><strong>Mode of Action:</strong> Inhibits growth in seedlings by blocking cell division</p>
+      </div>
+
+      <!-- Herbicide 10: Metolachlor -->
+      <div class="herbicide-card">
+        <img src="images/Metolachlor.avif" alt="Metolachlor">
+        <h3>Metolachlor</h3>
+        <p><strong>Common Name:</strong> Metolachlor</p>
+        <p><strong>Type:</strong> Pre-emergence herbicide</p>
+        <p><strong>Application:</strong> Effective for weed control in various crops</p>
+        <p><strong>Target Weeds:</strong> Annual grasses and broadleaf weeds</p>
+        <p><strong>Mode of Action:</strong> Inhibits the germination of seeds</p>
+      </div>
+
+      <!-- Herbicide 11: Isoxaflutole -->
+      <div class="herbicide-card">
+        <img src="images/Isoxaflutole.jpeg" alt="Isoxaflutole">
+        <h3>Isoxaflutole</h3>
+        <p><strong>Common Name:</strong> Isoxaflutole</p>
+        <p><strong>Type:</strong> Pre-emergence herbicide</p>
+        <p><strong>Application:</strong> For broad-spectrum weed control in corn</p>
+        <p><strong>Target Weeds:</strong> Grasses and broadleaf weeds</p>
+        <p><strong>Mode of Action:</strong> Inhibits the production of key enzymes involved in plant growth</p>
+      </div>
+
+      <!-- Herbicide 12: Mesotrione -->
+      <div class="herbicide-card">
+        <img src="images/Mesotrione.png" alt="Mesotrione">
+        <h3>Mesotrione</h3>
+        <p><strong>Common Name:</strong> Mesotrione</p>
+        <p><strong>Type:</strong> Post-emergence herbicide</p>
+        <p><strong>Application:</strong> Effective for weed control in corn</p>
+        <p><strong>Target Weeds:</strong> Broadleaf weeds</p>
+        <p><strong>Mode of Action:</strong> Inhibits the production of carotenoids in plants</p>
+      </div>
+    </section>
+    <a href="explore.html" class="back-btn">← Back to Home</a>
+  </div>
+
+ <!-- Floating Translate Button -->
+ <div class="floating-translate">
+  <div class="translate-toggle">🌐 Translate</div>
+  <div id="google_translate_element"></div>
+</div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: "en",
+        includedLanguages: "en,hi,mr,ta,te,bn,gu,kn,pa",
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      },
+      "google_translate_element"
+    );
+  }
+</script>
+
+<script
+  type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+></script>
+</body>
+</html>
+

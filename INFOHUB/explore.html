@@ -1,0 +1,274 @@
+﻿<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore - KrushiManch</title>
+    <style>
+@import url('../../fonts.css');
+      /* General styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Adani Regular', sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+      }
+
+      /* Cards Section */
+      .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 20px;
+      }
+
+      .card {
+        background-color: white;
+        width: 370px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-bottom: 5px solid #388e3c;
+      }
+
+      .card-content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .card-content h3 {
+        font-size: 1.5em;
+        color: #00796b;
+        margin-bottom: 15px;
+      }
+
+      .card-content p {
+        font-size: 1em;
+        margin-bottom: 20px;
+      }
+
+      .card-content a {
+        text-decoration: none;
+        background-color: #00796b;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .card-content a:hover {
+        background-color: #f4c542;
+        transform: translateY(-2px);
+      }
+
+      /* Media Queries for responsiveness */
+      @media (max-width: 768px) {
+        .cards-container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .title-section h1 {
+          font-size: 2.5em;
+        }
+        .card {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+      .floating-translate {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        font-family: 'Adani Regular', sans-serif;
+      }
+
+      .translate-toggle {
+        background-color: #00796b;
+        color: white;
+        padding: 10px 16px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 14px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.3s ease;
+      }
+
+      .translate-toggle:hover {
+        background-color: #00796b;
+      }
+
+      /* Hide dropdown by default */
+      #google_translate_element {
+        display: none;
+        margin-top: 8px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Show dropdown on hover */
+      .floating-translate:hover #google_translate_element {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Home Nav -->
+    <div style="background-color: #00796B; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between;">
+      <a href="/krushi-manch/welcome.php" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">🏠 Home</a>
+      <span style="color: white; font-size: 16px;">KrushiManch InfoHub</span>
+    </div>
+    <!-- Cards Section -->
+    <section class="cards-container">
+      <!-- Crop Information Card -->
+      <div class="card" onclick="window.location.href='crops.html'">
+        <img src="images/crops.jpg" alt="Crops" />
+        <div class="card-content">
+          <h3>Crops</h3>
+          <p>
+            Learn about various crops, their growth conditions, and best farming
+            practices.
+          </p>
+          <a href="crops.html">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Herbicides Card -->
+      <div class="card" onclick="window.location.href='herbicides.html'">
+        <img src="images/herbicide.jpg" alt="Herbicides" />
+        <div class="card-content">
+          <h3>Herbicides</h3>
+          <p>
+            Discover effective herbicides and how to use them safely in your
+            fields.
+          </p>
+          <a href="herbicides.html">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Pesticides Card -->
+      <div class="card" onclick="window.location.href='pesticides.html'">
+        <img src="images/pestiside.webp" alt="Pesticides" />
+        <div class="card-content">
+          <h3>Pesticides</h3>
+          <p>
+            Find out about pesticides for protecting your crops and ensuring
+            healthy growth.
+          </p>
+          <a href="pesticides.html">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Farming Tips Card -->
+      <div class="card" onclick="window.location.href='farming_tips.html'">
+        <img src="images/farming-tips.png" alt="Farming Tips" />
+        <div class="card-content">
+          <h3>Farming Tips</h3>
+          <p>
+            Get useful tips and tricks for efficient farming and better yields.
+          </p>
+          <a href="farming_tips.html">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Soil Health Card -->
+      <div class="card" onclick="window.location.href='soil_health.html'">
+        <img src="images/soil.jpeg" alt="Soil Health" />
+        <div class="card-content">
+          <h3>Soil Health & Fertility</h3>
+          <p>
+            Understand the importance of soil health and ways to maintain its
+            fertility.
+          </p>
+          <a href="soil_health.html">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Irrigation Systems Card -->
+      <div
+        class="card"
+        onclick="window.location.href='irrigation_systems.html'"
+      >
+        <img src="images/irrigation.jpeg" alt="Irrigation Systems" />
+        <div class="card-content">
+          <h3>Irrigation Systems</h3>
+          <p>
+            Learn about various irrigation systems and how to manage water
+            effectively.
+          </p>
+          <a href="irrigation_systems.html">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Crop Diseases Card -->
+      <div class="card" onclick="window.location.href='crop_diseases.html'">
+        <img src="images/crop-diseases.jpeg" alt="Crop Diseases" />
+        <div class="card-content">
+          <h3>Crop Diseases</h3>
+          <p>Learn how to identify, prevent, and manage crop diseases.</p>
+          <a href="crop_diseases.html">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Crop Management Card -->
+      <div class="card" onclick="window.location.href='crop_management.html'">
+        <img src="images/crop-management.jpeg" alt="Crop Management" />
+        <div class="card-content">
+          <h3>Crop Management</h3>
+          <p>
+            Explore best practices for efficient crop management to maximize
+            yields.
+          </p>
+          <a href="crop_management.html">Learn More</a>
+        </div>
+      </div>
+    </section>
+    <!-- Floating Translate Button -->
+    <div class="floating-translate">
+      <div class="translate-toggle">🌐 Translate</div>
+      <div id="google_translate_element"></div>
+    </div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,hi,mr,ta,te,bn,gu,kn,pa",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
+</html>
+

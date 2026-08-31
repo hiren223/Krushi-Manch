@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pesticides - KrushiManch</title>
+  <style>
+@import url('../../fonts.css');
+    /* General Styling */
+    body {
+      font-family: 'Adani Regular', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+    }
+
+    header {
+      background-color: #00796B;
+      color: white;
+      padding: 1px 0;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .pesticide-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .pesticide-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 15px;
+      width: calc(33.33% - 30px);
+      box-sizing: border-box;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .pesticide-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+    .pesticide-card img {
+      width: 100%;
+      height: 437.41px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .pesticide-card h3 {
+      font-size: 20px;
+      margin: 15px;
+      color: #333;
+    }
+
+    .pesticide-card p {
+      margin: 0 15px 15px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .pesticide-card p strong {
+      color: #00796B;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .pesticide-card {
+        width: calc(50% - 30px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .pesticide-card {
+        width: 100%;
+      }
+    }
+    .back-btn {
+        display: block;
+        text-align: center;
+        margin: 30px auto;
+        padding: 12px 30px;
+        background-color: #00796b;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        width: fit-content;
+      }
+
+      .back-btn:hover {
+        background-color: #005e50;
+      }
+
+      .floating-translate {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        font-family: 'Adani Regular', sans-serif;
+      }
+
+      .translate-toggle {
+        background-color: #00796b;
+        color: white;
+        padding: 10px 16px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 14px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.3s ease;
+      }
+
+      .translate-toggle:hover {
+        background-color: #00796b;
+      }
+
+      /* Hide dropdown by default */
+      #google_translate_element {
+        display: none;
+        margin-top: 8px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Show dropdown on hover */
+      .floating-translate:hover #google_translate_element {
+        display: block;
+      }
+   
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Pesticide Information</h1>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+    <section class="pesticide-container">
+
+      <!-- Pesticide 1 -->
+      <div class="pesticide-card">
+        <img src="images/Chlorpyrifos.jpg" alt="Chlorpyrifos">
+        <h3>Chlorpyrifos</h3>
+        <p><strong>Type:</strong> Organophosphate insecticide</p>
+        <p><strong>Used For:</strong> Rice, cotton, soybean</p>
+        <p><strong>Targets:</strong> Insects like caterpillars, beetles, borers</p>
+        <p><strong>Mode of Action:</strong> Inhibits acetylcholinesterase</p>
+      </div>
+
+      <!-- Pesticide 2 -->
+      <div class="pesticide-card">
+        <img src="images/Cypermethrin.jpg" alt="Cypermethrin">
+        <h3>Cypermethrin</h3>
+        <p><strong>Type:</strong> Synthetic pyrethroid</p>
+        <p><strong>Used For:</strong> Vegetables, cereals</p>
+        <p><strong>Targets:</strong> Aphids, moths, leafhoppers</p>
+        <p><strong>Mode of Action:</strong> Affects nerve cells of insects</p>
+      </div>
+
+      <!-- Pesticide 3 -->
+      <div class="pesticide-card">
+        <img src="images/Imidacloprid.webp" alt="Imidacloprid">
+        <h3>Imidacloprid</h3>
+        <p><strong>Type:</strong> Neonicotinoid insecticide</p>
+        <p><strong>Used For:</strong> Cotton, paddy, sugarcane</p>
+        <p><strong>Targets:</strong> Termites, aphids, whiteflies</p>
+        <p><strong>Mode of Action:</strong> Interferes with nervous system</p>
+      </div>
+
+      <!-- Pesticide 4 -->
+      <div class="pesticide-card">
+        <img src="images/Fipronil.jpg" alt="Fipronil">
+        <h3>Fipronil</h3>
+        <p><strong>Type:</strong> Phenylpyrazole insecticide</p>
+        <p><strong>Used For:</strong> Corn, rice, sugarcane</p>
+        <p><strong>Targets:</strong> Rootworms, stem borers, thrips</p>
+        <p><strong>Mode of Action:</strong> Blocks GABA-gated chloride channels</p>
+      </div>
+
+      <!-- Pesticide 5 -->
+      <div class="pesticide-card">
+        <img src="images/Malathion.jpeg" alt="Malathion">
+        <h3>Malathion</h3>
+        <p><strong>Type:</strong> Organophosphate insecticide</p>
+        <p><strong>Used For:</strong> Fruits, vegetables, grains</p>
+        <p><strong>Targets:</strong> Mosquitoes, flies, lice</p>
+        <p><strong>Mode of Action:</strong> Inhibits acetylcholinesterase</p>
+      </div>
+
+      <!-- Pesticide 6 -->
+      <div class="pesticide-card">
+        <img src="images/Endosulfan.jpg" alt="Endosulfan">
+        <h3>Endosulfan</h3>
+        <p><strong>Type:</strong> Organochlorine insecticide</p>
+        <p><strong>Used For:</strong> Cotton, tea, vegetables</p>
+        <p><strong>Targets:</strong> Aphids, caterpillars</p>
+        <p><strong>Mode of Action:</strong> Affects CNS of insects</p>
+      </div>
+
+      <!-- Pesticide 7 -->
+      <div class="pesticide-card">
+        <img src="images/Acephate.jpeg" alt="Acephate">
+        <h3>Acephate</h3>
+        <p><strong>Type:</strong> Systemic insecticide</p>
+        <p><strong>Used For:</strong> Tobacco, vegetables</p>
+        <p><strong>Targets:</strong> Aphids, leaf miners</p>
+        <p><strong>Mode of Action:</strong> Disrupts neurotransmission</p>
+      </div>
+
+      <!-- Pesticide 8 -->
+      <div class="pesticide-card">
+        <img src="images/Thiamethoxam.webp" alt="Thiamethoxam">
+        <h3>Thiamethoxam</h3>
+        <p><strong>Type:</strong> Neonicotinoid insecticide</p>
+        <p><strong>Used For:</strong> Rice, cotton</p>
+        <p><strong>Targets:</strong> Sucking pests</p>
+        <p><strong>Mode of Action:</strong> Interferes with insect neural system</p>
+      </div>
+
+      <!-- Pesticide 9 -->
+      <div class="pesticide-card">
+        <img src="images/Spinosad.webp" alt="Spinosad">
+        <h3>Spinosad</h3>
+        <p><strong>Type:</strong> Natural insecticide</p>
+        <p><strong>Used For:</strong> Vegetables, fruits</p>
+        <p><strong>Targets:</strong> Thrips, leafminers, caterpillars</p>
+        <p><strong>Mode of Action:</strong> Activates insect nervous system</p>
+      </div>
+
+      <!-- Pesticide 10 -->
+      <div class="pesticide-card">
+        <img src="images/Abamectin.jpg" alt="Abamectin">
+        <h3>Abamectin</h3>
+        <p><strong>Type:</strong> Avermectin insecticide</p>
+        <p><strong>Used For:</strong> Citrus, cotton</p>
+        <p><strong>Targets:</strong> Mites, leafminers</p>
+        <p><strong>Mode of Action:</strong> Affects neurotransmission</p>
+      </div>
+
+      <!-- Pesticide 11 -->
+      <div class="pesticide-card">
+        <img src="images/Lambda-Cyhalothrin.png" alt="Lambda-cyhalothrin">
+        <h3>Lambda-Cyhalothrin</h3>
+        <p><strong>Type:</strong> Pyrethroid insecticide</p>
+        <p><strong>Used For:</strong> Corn, cotton</p>
+        <p><strong>Targets:</strong> Beetles, armyworms</p>
+        <p><strong>Mode of Action:</strong> Affects sodium channels in nerves</p>
+      </div>
+
+      <!-- Pesticide 12 -->
+      <div class="pesticide-card">
+        <img src="images/Deltamethrin.webp" alt="Deltamethrin">
+        <h3>Deltamethrin</h3>
+        <p><strong>Type:</strong> Pyrethroid insecticide</p>
+        <p><strong>Used For:</strong> Vegetables, cereals</p>
+        <p><strong>Targets:</strong> Mites, caterpillars, beetles</p>
+        <p><strong>Mode of Action:</strong> Alters nerve function in insects</p>
+      </div>
+      <a href="explore.html" class="back-btn">← Back to Home</a>
+    </section>
+  </div>
+
+  <!-- Floating Translate Button -->
+  <div class="floating-translate">
+    <div class="translate-toggle">🌐 Translate</div>
+    <div id="google_translate_element"></div>
+  </div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: "en",
+          includedLanguages: "en,hi,mr,ta,te,bn,gu,kn,pa",
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        },
+        "google_translate_element"
+      );
+    }
+  </script>
+
+  <script
+    type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  ></script>
+</body>
+</html>
+
