@@ -280,11 +280,6 @@ Suggestions and improvements are welcome.
 
 ---
 
-## 📄 License
-
-No license is specified in this README. Add a `LICENSE` file after choosing an appropriate license for your project.
-
----
 
 ## 🌱 Vision
 
